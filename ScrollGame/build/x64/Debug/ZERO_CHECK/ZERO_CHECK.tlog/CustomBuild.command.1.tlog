@@ -1,0 +1,10 @@
+^E:\WORK\TEST\CMD_SCROLLGAME\CMDSCROLLGAME\SCROLLGAME\BUILD\CMAKEFILES\2DE666B255269DCFEEC7F581BF84E5C8\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Work/TEST/CMD_ScrollGame/CmdScrollGame/ScrollGame -BE:/Work/TEST/CMD_ScrollGame/CmdScrollGame/ScrollGame/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Work/TEST/CMD_ScrollGame/CmdScrollGame/ScrollGame/build/ScrollGame.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

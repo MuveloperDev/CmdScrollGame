@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\ScrollGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Singleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0C035C52-CD9D-38E5-BDBB-D6AFB1C72EFA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

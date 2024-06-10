@@ -1,0 +1,6 @@
+﻿  LogProcess.cpp
+  ScrollGame.cpp
+E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame.cpp(12,73): warning C4267: '인수': 'size_t'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+ScrollGame.obj : error LNK2005: main이(가) LogProcess.obj에 이미 정의되어 있습니다.
+E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\x64\Debug\ScrollGame.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
