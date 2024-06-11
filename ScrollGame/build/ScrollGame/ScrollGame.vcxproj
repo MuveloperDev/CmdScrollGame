@@ -321,6 +321,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Example.cpp" />
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\GameManager.cpp" />
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\InputHandler.cpp" />
     <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Log.cpp" />
     <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\ScrollGame.cpp" />
     <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Singleton.cpp" />

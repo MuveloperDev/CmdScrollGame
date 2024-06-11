@@ -4,6 +4,12 @@
     <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\GameManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\InputHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="E:\Work\TEST\CMD_ScrollGame\CmdScrollGame\ScrollGame\ScrollGame\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

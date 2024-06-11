@@ -7,5 +7,9 @@ class Util : public Singleton<Util>
 
 public:
 	void Clear();
+	void ExitApplication();
+	void CacheGM(class GameManager& inGM);
+private:
+	class GameManager* gm;
 };
 

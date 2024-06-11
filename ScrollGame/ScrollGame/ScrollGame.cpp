@@ -4,10 +4,11 @@
 #include <iostream>
 #include <windows.h>
 #include <string>
-#include <thread>
-#include "Example.h"
+//#include <thread>
+//#include "Example.h"
 #include "Log.h"
 #include "Util.h"
+#include "GameManager.h"
 
 int main()
 {
@@ -56,38 +57,17 @@ int main()
     Log::Complete("[ Launch Application ]");
 
     // 메인 프로그램 로직
-    // 예제: 싱글턴 사용
-    // ...
-    // 
-    // MySingleton& instance1 = MySingleton::getInstance();
-    // instance1.doSomething();
-    // ...
-    Util& utilInstance = Util::GetInstance();
-    while (true)
+    GameManager* gm = new GameManager();
+    while (gm->StateApplication != Exit)
     {
-        SHORT lefttState = GetAsyncKeyState(VK_LEFT);
-        SHORT rightState = GetAsyncKeyState(VK_RIGHT);
-
-        bool isLeft = (lefttState & 0x8000) != 0;
-        bool isRight = (rightState & 0x8000) != 0;
-
-        if (isLeft)
-        {
-            break;
-        }
-
-        if (isRight)
-        {
-            utilInstance.Clear();
-            Log::LogMessage("Regular log message");
-            Log::Error("log error");
-            Log::Complete("log Complete");
-            Log::Warnning("log Warnning");
-        }
+        gm->Update();
+        gm->Render();
     }
+    gm->Finalize();
+    delete gm;
+    gm = nullptr;
 
-    Example& instance = Example::GetInstance();
-    instance.DoSomthing();
+
     // 프로세스 종료
     CloseHandle(hWrite);
     WaitForSingleObject(pi.hProcess, INFINITE);

@@ -1,5 +1,6 @@
 #include <string>
-
+#include <mutex>
+#include <windows.h>
 #pragma once
 enum LogLevel {
     LOG = 7,        // Èò»ö

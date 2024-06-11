@@ -1,6 +1,5 @@
 #include <iostream>
 #include <windows.h>
-#include <mutex>
 #include "Log.h"
 
 HANDLE Log::hWrite_ = INVALID_HANDLE_VALUE;
