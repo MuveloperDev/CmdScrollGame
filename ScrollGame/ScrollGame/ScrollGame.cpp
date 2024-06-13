@@ -4,8 +4,6 @@
 #include <iostream>
 #include <windows.h>
 #include <string>
-//#include <thread>
-//#include "Example.h"
 #include "Log.h"
 #include "Util.h"
 #include "GameManager.h"

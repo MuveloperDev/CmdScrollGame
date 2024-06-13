@@ -1,8 +1,11 @@
 ﻿// LogSystem.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
 //
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <windows.h>
+#include <ctime>
+
 enum LogLevel {
     LOG = 7,        // 흰색
     LOGERROR = 4,      // 빨간색
@@ -19,10 +22,45 @@ LogLevel StringToLogLevel(std::string str)
     else if (str == "WARNING") return LogLevel::WARNING;
     else if (str == "COMPLETE") return LogLevel::COMPLETE;
     else return LogLevel::LOGERROR;
-
 }
+
+std::string GetCurrentDateTime(bool isLog = false) {
+    time_t now = time(0);
+    tm localTime;
+    localtime_s(&localTime, &now);
+
+    char buffer[80];
+    const char* type = isLog == true ? "%Y-%m-%d_%H:%M:%S" : "%Y-%m-%d_%H-%M-%S";
+    strftime(buffer, sizeof(buffer), type, &localTime);
+    return std::string(buffer);
+}
+
+bool CreateDirectoryIfNotExists(const std::string& path) {
+    DWORD attribs = GetFileAttributesA(path.c_str());
+    if (attribs == INVALID_FILE_ATTRIBUTES || !(attribs & FILE_ATTRIBUTE_DIRECTORY)) {
+        return CreateDirectoryA(path.c_str(), nullptr);
+    }
+    return true;
+}
+
 int main()
 {
+    std::string logDirectory = "E:/Work/TEST/CMD_ScrollGame/CmdScrollGame/ScrollGame/Logs/";
+    if (!CreateDirectoryIfNotExists(logDirectory)) {
+        std::cerr << "Failed to create log directory: " << logDirectory << std::endl;
+        return 1;
+    }
+    std::string logFileName = "[ " + GetCurrentDateTime() + " ]_Log.txt";
+    std::string logFilePath = logDirectory + logFileName;
+    std::cout << logFilePath << std::endl;
+    std::ofstream logFile(logFilePath, std::ios::out); // 새 로그 파일 생성
+
+    if (!logFile.is_open()) {
+        std::cerr << "Failed to open log file: " << logFilePath << std::endl;
+        return 1;
+    }
+
+
     std::string line;
     while (std::getline(std::cin, line)) {
         if (line.length() > 3 && line[0] == '[') 
@@ -36,9 +74,11 @@ int main()
                 //line = line.substr(endPos + 2); // 색상 코드와 공백 제거
             }
         }
-        std::cout << line << std::endl;
+        std::cout << " [ " + GetCurrentDateTime(true) + " ] " + line << std::endl;
+        logFile << " [ " + GetCurrentDateTime(true) + " ] " + line << std::endl; // 파일에 로그 기록
         setColor(LOG); // 기본 색상으로 복원
     }
+    logFile.close();
     return 0;
 }
 

@@ -18,6 +18,8 @@ public:
     static void Complete(const std::string& message);
     static void Warnning(const std::string& message);
 
+public:
+    static void Cout(const std::string& message);
     
 private:
 

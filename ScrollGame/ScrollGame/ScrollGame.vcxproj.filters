@@ -21,9 +21,6 @@
     <ClCompile Include="Singleton.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Example.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Util.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -36,12 +33,12 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Example.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Util.h">
@@ -54,6 +51,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="GameManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

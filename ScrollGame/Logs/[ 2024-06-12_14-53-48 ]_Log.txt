@@ -1,0 +1,7 @@
+ [ 2024-06-12_14:53:48 ] [COMPLETE] [ Launch Application ]
+ [ 2024-06-12_14:53:48 ] [COMPLETE] [ Allocated GameManager ]
+ [ 2024-06-12_14:53:48 ] [COMPLETE] Setted console window size [ width : 1020  height : 1020 ]
+ [ 2024-06-12_14:53:48 ] [COMPLETE] Changed Application State1 - [ NONE ] /RUN
+ [ 2024-06-12_14:53:48 ] [COMPLETE] Changed Application State - [ RUN ]
+ [ 2024-06-12_14:53:48 ] [COMPLETE] [ Allocated InputHandler ]
+ [ 2024-06-12_14:53:48 ] [COMPLETE] [ Allocated Map ]

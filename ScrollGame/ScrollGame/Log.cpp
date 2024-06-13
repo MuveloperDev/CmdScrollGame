@@ -47,6 +47,10 @@ void Log::Warnning(const std::string& message)
     Message(message, LogLevel::WARNING);
 }
 
+void Log::Cout(const std::string& message)
+{
+    std::cout << message << std::endl;
+}
 std::string Log::LogLevelToString(LogLevel level)
 {
     switch (level)
